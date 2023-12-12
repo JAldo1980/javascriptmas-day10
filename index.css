@@ -1,0 +1,146 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-image: url(/snow-background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+header h1 {
+  text-align: center;
+  margin-top: 1em;
+  font-size: 3.5rem;
+  color: yellow;
+}
+
+h1 span {
+  text-decoration: line-through;
+  color: RGBA(254, 255, 0, 0.39);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 1em;
+  box-sizing: border-box;
+  position: relative; /* Add relative positioning to the container */
+}
+
+.ipod-container {
+  background-image: url(/ipod-graphic.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 700px;
+  position: relative;
+}
+
+.forward-backwards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%; /* Center horizontally */
+  bottom: 8em; /* Adjust as needed */
+  transform: translateX(-49%); /* Center using transform */
+  gap: 9.1255em; /* Adjust as needed */
+}
+
+.controls-1-el,
+.controls-2-el {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.play-hide-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%; /* Center horizontally */
+  bottom: 2.6em; /* Adjust as needed */
+  transform: translateX(-41%); /* Center using transform */
+  gap: 7.8255em; /* Adjust as needed */
+}
+
+.image-container {
+  position: absolute;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -97%);
+}
